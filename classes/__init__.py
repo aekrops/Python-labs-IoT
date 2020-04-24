@@ -1,1 +1,3 @@
-from lawyer_firm.main.classes import *
+from classes.lawyer import *
+from classes.service import *
+from classes.service_type import *

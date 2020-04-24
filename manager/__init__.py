@@ -1,1 +1,1 @@
-from lawyer_firm.main.manager import *
+from manager import *
