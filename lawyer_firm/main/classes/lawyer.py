@@ -3,7 +3,7 @@ from service import Service
 
 class Lawyer(Service):
 
-    def __init__(self, name, age, price_in_uah, representation_in_court, advice, collecting_evidence):
+    def __init__(self, name=None, age=None, price_in_uah=None, representation_in_court=None, advice=None, collecting_evidence=None):
         super().__init__(representation_in_court, advice, collecting_evidence)
         self.name = name
         self.age = age
