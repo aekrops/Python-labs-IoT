@@ -1,4 +1,4 @@
-from service import Service
+from main.classes.service import Service
 
 
 class Lawyer(Service):
