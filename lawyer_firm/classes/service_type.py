@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class ServiceEnum(Enum):
     ADVICE = 'advice'
     COLLECTINGEVIDENCE = 'collecting_evidence'
