@@ -10,7 +10,7 @@ class Service:
     @staticmethod
     def create_list_of_services(representation_in_court: bool, advice: bool, collecting_evidence: bool):
         services = [representation_in_court, advice, collecting_evidence]
-        services_name = ['representation in court', 'advice', 'collecting evidence']
+        services_name = ['representation_in_court', 'advice', 'collecting_evidence']
         result_service = []
         for enum in range(3):
             if services[enum]:
@@ -27,46 +27,6 @@ class Service:
         advice = 'Advice: {}\n'.format(self.advice)
         collecting_evidence = 'Collecting evidence: {}\n'.format(self.collecting_evidence)
         return drafting_a_claim + signing_a_contract + representation_in_court + advice + collecting_evidence
-
-    @property
-    def drafting_a_claim(self):
-        return self.drafting_a_claim
-
-    @property
-    def signing_a_contract(self):
-        return self.signing_a_contract
-
-    @property
-    def representation_in_court(self):
-        return self.representation_in_court
-
-    @property
-    def advice(self):
-        return self.advice
-
-    @property
-    def collecting_evidence(self):
-        return self.collecting_evidence
-
-    @drafting_a_claim.setter
-    def drafting_a_claim(self, value):
-        self._drafting_a_claim = value
-
-    @signing_a_contract.setter
-    def signing_a_contract(self, value):
-        self._signing_a_contract = value
-
-    @representation_in_court.setter
-    def representation_in_court(self, value):
-        self._representation_in_court = value
-
-    @advice.setter
-    def advice(self, value):
-        self._advice = value
-
-    @collecting_evidence.setter
-    def collecting_evidence(self, value):
-        self._collecting_evidence = value
 
 
 class Litigation(Service):
