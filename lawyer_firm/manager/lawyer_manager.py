@@ -35,4 +35,4 @@ class LawyerManager:
 
 
 if __name__ == "__main__":
-    doctest.testmod()
+    doctest.testmod(verbose=True)
