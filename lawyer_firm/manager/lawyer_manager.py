@@ -1,5 +1,6 @@
 import doctest
 from lawyer_firm.classes.lawyer import Lawyer
+from lawyer_firm.classes.services_type import ServiceType
 
 
 class LawyerManager:
@@ -13,7 +14,7 @@ class LawyerManager:
     def __del__(self):
         return
 
-    def find_lawyers_by_service(self, service_to_find):
+    def find_lawyers_by_service(self, service_to_find: ServiceType):
         # python -m doctest -v D:\github\python-labs-IoT\lawyer_firm\manager\lawyer_manager.py
         """
         >>> law1 = Lawyer('Sebastian', 12, 100, True, False, False)
@@ -21,8 +22,12 @@ class LawyerManager:
         >>> law3 = Lawyer('Max', 15, 300, False, True, True)
         >>> lawyers = [law1, law2, law3]
         >>> manager = LawyerManager(lawyers)
-        >>> print(manager.find_lawyers_by_service('advice'))
+        >>> print(manager.find_lawyers_by_service(ServiceType.ADVICE.value))
         ['Petro', 'Max']
+        >>> print(manager.find_lawyers_by_service(ServiceType.COLLECTING_EVIDENCE.value))
+        ['Max']
+        >>> print(manager.find_lawyers_by_service(ServiceType.REPRESENTATION_IN_COURT.value))
+        ['Sebastian']
         """
         result_lawyers = []
         for lawyer in self.lawyer_list:

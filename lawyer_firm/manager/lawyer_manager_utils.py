@@ -1,5 +1,6 @@
 import doctest
 from lawyer_firm.classes.lawyer import Lawyer
+from lawyer_firm.classes.sort_type import SortType
 
 
 class LawyerManagerUtils:
@@ -24,7 +25,7 @@ class LawyerManagerUtils:
         >>> law6 = Lawyer('Roman', 19, 321, True, True, False)
         >>> lawyers = [law1, law2, law3, law4, law5, law6]
         >>> manager_utils = LawyerManagerUtils(lawyers)
-        >>> sorted_lawyers = manager_utils.sort_lawyers_by_name('ascending')
+        >>> sorted_lawyers = manager_utils.sort_lawyers_by_name(SortType.ASCENDING.value)
         >>> for lawyer in sorted_lawyers: print(lawyer.name)
         Andrey
         Denys
@@ -32,7 +33,7 @@ class LawyerManagerUtils:
         Nazar
         Roman
         Sebastian
-        >>> sorted_lawyers = manager_utils.sort_lawyers_by_name('descending')
+        >>> sorted_lawyers = manager_utils.sort_lawyers_by_name(SortType.DESCENDING.value)
         >>> for lawyer_1 in sorted_lawyers: print(lawyer_1.name)
         Sebastian
         Roman
