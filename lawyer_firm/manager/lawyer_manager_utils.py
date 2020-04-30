@@ -43,9 +43,9 @@ class LawyerManagerUtils:
         Andrey
         """
         sorted_lawyers = sorted(self.lawyers_list, key=lambda lawyer: lawyer.name)
-        if type_of_sort == 'ascending':
+        if type_of_sort == SortType.ASCENDING.value:
             return sorted_lawyers
-        elif type_of_sort == 'descending':
+        elif type_of_sort == SortType.DESCENDING.value:
             return sorted_lawyers[::-1]
         else:
             return sorted_lawyers
@@ -78,13 +78,12 @@ class LawyerManagerUtils:
         Sebastian
         """
         sorted_lawyers = sorted(self.lawyers_list, key=lambda lawyer: (len(lawyer.services)))
-        if type_of_sort == 'ascending':
+        if type_of_sort == SortType.ASCENDING.value:
             return sorted_lawyers
-        elif type_of_sort == 'descending':
+        elif type_of_sort == SortType.DESCENDING.value:
             return sorted_lawyers[::-1]
 
 
 if __name__ == "__main__":
     doctest.testmod(verbose=True)
-
 
